@@ -1,13 +1,30 @@
-=== Woo Pelecard Gateway ===
-Contributors: idofri, ramiy
+=== Jewtech Woo Pelecard Gateway ===
+Original Contributors: idofri, ramiy. Modified 2021-07 by Nathan Rona
 Tags: e-commerce, payments, gateway, checkout, pelecard, invoices, woo commerce, subscriptions
 Requires at least: 5.5
 Tested up to: 5.8
-Stable tag: 1.4.8
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GPLv3 or higher
 
 Extends WooCommerce with Pelecard payment gateway.
+Modified by Nathan Rona, Jewtech
+
+Original plugin
+
+/**
+ * Plugin Name: Woo Pelecard Gateway
+ * Plugin URI: https://wordpress.org/plugins/woo-pelecard-gateway/
+ * Description: Extends WooCommerce with Pelecard payment gateway.
+ * Version: 1.4.8
+ * Author: Ido Friedlander
+ * Author URI: https://profiles.wordpress.org/idofri/
+ * Text Domain: woo-pelecard-gateway
+ * Requires at least: 5.5
+ * Requires PHP: 7.0
+ *
+ * WC requires at least: 3.0
+ * WC tested up to: 5.4
+ */
+
 
 == Description ==
 

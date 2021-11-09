@@ -2,29 +2,14 @@
 
 /*
 Plugin Name: Jewtech Woocommerce Pelecard Gateway
-Plugin URI: http://URI_Of
-Description: A brief description of the Plugin.
-Version: 1.0
-Author: user3
-Author URI: http://URI_Of_The_Plugin_Author
-License: A "Slug" license name e.g. GPL2
+Plugin URI: https://github.com/jewtech/jewtech-woocommerce-pelecard-gateway
+Description: Extends WooCommerce with Pelecard payment gateway. Extended by Jewtech.
+Author: Natan Rona
+Author URI: https://github.com/nathanrona
+License: GP3 or higher
 */
 
 
-/**
- * Plugin Name: Woo Pelecard Gateway
- * Plugin URI: https://wordpress.org/plugins/woo-pelecard-gateway/
- * Description: Extends WooCommerce with Pelecard payment gateway.
- * Version: 1.4.8
- * Author: Ido Friedlander
- * Author URI: https://profiles.wordpress.org/idofri/
- * Text Domain: woo-pelecard-gateway
- * Requires at least: 5.5
- * Requires PHP: 7.0
- *
- * WC requires at least: 3.0
- * WC tested up to: 5.4
- */
 
 defined( 'ABSPATH' ) || exit;
 
