@@ -16,7 +16,7 @@ class ComposerStaticInit76f7658240f9081333c5f221fad2aa2e
     public static $prefixDirsPsr4 = array (
         'Pelecard\\' => 
         array (
-            0 => __DIR__ . '/../..',
+            0 => __DIR__ . '/../..' . '/includes',
         ),
     );
 

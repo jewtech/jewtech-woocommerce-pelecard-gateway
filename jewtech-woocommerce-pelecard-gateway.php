@@ -1,15 +1,18 @@
 <?php
-
-/*
-Plugin Name: Jewtech Woocommerce Pelecard Gateway
-Plugin URI: https://github.com/jewtech/jewtech-woocommerce-pelecard-gateway
-Description: Extends WooCommerce with Pelecard payment gateway. Extended by Jewtech.
-Author: Natan Rona
-Author URI: https://github.com/nathanrona
-License: GP3 or higher
-*/
-
-
+/**
+ * Plugin Name: Jew-tech Woo Pelecard Gateway
+ * Plugin URI: https://github.com/jewtech/jewtech-woocommerce-pelecard-gateway
+ * Description: Extends WooCommerce with Pelecard payment gateway.
+ * Version: 1.0
+ * Author: Nathan Rona
+ * Author URI:  https://github.com/nathanrona
+ * Text Domain: woo-pelecard-gateway
+ * Requires at least: 5.5
+ * Requires PHP: 7.0
+ *
+ * WC requires at least: 3.0
+ * WC tested up to: 5.4
+ */
 
 defined( 'ABSPATH' ) || exit;
 
@@ -33,7 +36,7 @@ function wpg_load_plugin_textdomain() {
 
 function wpg_fail_php_version() {
 	/* translators: %s: PHP version */
-	$message      = sprintf( esc_html__( 'Woo Pelecard Gateway requires PHP version %s+, plugin is currently NOT RUNNING.', 'woo-pelecard-gateway' ), '7.0' );
+	$message = sprintf( esc_html__( 'Woo Pelecard Gateway requires PHP version %s+, plugin is currently NOT RUNNING.', 'woo-pelecard-gateway' ), '7.0' );
 	$html_message = sprintf( '<div class="error">%s</div>', wpautop( $message ) );
 	echo wp_kses_post( $html_message );
 }

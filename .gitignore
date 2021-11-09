@@ -17,3 +17,15 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+.idea/codeStyles/codeStyleConfig.xml
+.idea/codeStyles/Project.xml
+.idea/jewtech-woocommerce-pelecard-gateway.iml
+.idea/modules.xml
+.idea/php.xml
+.idea/vcs.xml
+.idea/deployment.xml
+.idea/webServers.xml
+jewtech-woocommerce-pelecard-gateway.php.bak
+jewtech-woocommerce-pelecard-gateway.php.bak
+*.bak
+*.bak
