@@ -6,7 +6,7 @@ Tested up to: 5.8
 License: GPLv3 or higher
 
 Extends WooCommerce with Pelecard payment gateway.
-Modified by Nathan Rona, Jewtech
+Modified by Nathan Rona, Jewtech 2021-11-09
 
 Original plugin
 
@@ -47,7 +47,7 @@ The plugin allows you to use Pelecard payment gateway with the WooCommerce plugi
 
 = Installation =
 1. In your WordPress Dashboard go to "Plugins" -> "Add Plugin".
-2. Search for "Woo Pelecard Gateway".
+2. Search for "Jew-tech Woo Pelecard Gateway".
 3. Install the plugin by pressing the "Install" button.
 4. Activate the plugin by pressing the "Activate" button.
 5. Open the settings page for WooCommerce and click the "Payments" tab.
@@ -59,19 +59,13 @@ The plugin allows you to use Pelecard payment gateway with the WooCommerce plugi
 * PHP version 7.0 or greater.
 * MySQL version 5.6 or greater.
 
-== Screenshots ==
+== Changelog  ==
+=Modified=====
+=1.0===
+Added support for passing number of payment and minimum first payment with order as order-meta.
+The meta-keys to use are billing_number_of_payments and billing_first_payment_min.
 
-1. Easy configuration.
-2. Payment gateway selection.
-3. Responsive, IFrame-based form.
-
-== Frequently Asked Questions ==
-
-= What is the cost for the gateway plugin? =
-This plugin is a FREE download.
-
-== Changelog ==
-
+=Original================
 = 1.4.8 =
 * Add 3D-Secure params to J4 after J5 requests.
 * Save total-payments for later use when doing J5 transactions.

@@ -495,7 +495,9 @@ class Gateway extends WC_Payment_Gateway_CC {
 	}
 
 	/**
+	 *  @param WC_Order|null $order
 	 * @return int
+	 * @modified 2021-11-09 by Nathan Rona JewTech, added $order as param. Allow pass number of payments in order meta
 	 */
 	public function get_minimum_payments(WC_Order $order=null) {
 		if ($order!=null) {
@@ -549,7 +551,9 @@ class Gateway extends WC_Payment_Gateway_CC {
 	}
 
 	/**
+	 * @param WC_Order|null $order
 	 * @return int
+	 * @modified 2021-11-09 by Nathan Rona JewTech, added $order as param. Allow pass number of payments in order meta
 	 */
 	public function get_maximum_payments(WC_Order $order=null) {
 		if($order!=null) {
@@ -1403,5 +1407,19 @@ class Gateway extends WC_Payment_Gateway_CC {
 		}
 
 		return $order->get_cancel_order_url_raw( $checkout_url );
+	}
+/**
+* @since  2021-11-09 by Nathan Rona JewTech, allow passing first payment minimum sum in order meta
+* @param WC_Order $order
+* @return int
+*/
+	public function get_first_payment(WC_Order $order){
+
+		$order_billing_first_payment = $order->get_meta( 'billing_first_payment_min' );
+		if ( ! empty( $order_billing_first_payment ) and is_numeric( $order_billing_first_payment ) ) {
+			return absint($order_billing_first_payment*100);
+		}
+
+		return $this->get_option( 'first_payment' );
 	}
 }

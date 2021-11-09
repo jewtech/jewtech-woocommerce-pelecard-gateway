@@ -15,6 +15,9 @@ class Api {
 	 * @param \Pelecard\Gateway $gateway
 	 *
 	 * @return array|mixed|\WP_Error
+	 *
+	 * @modified 2021-11-09 by Nathan Rona JewTech, add $order as parameter to min and max payments, call function to get
+	 * first payment instead of directly through get_option. This to allow to get the data from order meta.
 	 */
 	public static function get_checkout_iframe_url( WC_Order $order, Gateway $gateway ) {
 		$args = apply_filters( 'wpg/checkout/iframe_args', [
@@ -43,7 +46,7 @@ class Api {
 			'MaxPayments' => $gateway->get_maximum_payments($order),
 			'MinPayments' => $gateway->get_minimum_payments($order),
 			'MinPaymentsForCredit' => $gateway->get_option( 'min_credit' ),
-			/*'FirstPayment' => $gateway->get_option( 'first_payment' ),*/
+			'FirstPayment' => $gateway->get_first_payment( $order ),
 			'ParamX' => $order->get_id(),
 			'UserKey' => $order->get_order_key(),
 			'SetFocus' => $gateway->get_option( 'set_focus' ),
