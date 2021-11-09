@@ -40,8 +40,8 @@ class Api {
 			'SplitCCNumber' => 'yes' === $gateway->get_option( 'split_cc_number' ),
 			'FeedbackOnTop' => true,
 			'FeedbackDataTransferMethod' => 'POST',
-			'MaxPayments' => $gateway->get_maximum_payments(),
-			'MinPayments' => $gateway->get_minimum_payments(),
+			'MaxPayments' => $gateway->get_maximum_payments($order),
+			'MinPayments' => $gateway->get_minimum_payments($order),
 			'MinPaymentsForCredit' => $gateway->get_option( 'min_credit' ),
 			/*'FirstPayment' => $gateway->get_option( 'first_payment' ),*/
 			'ParamX' => $order->get_id(),

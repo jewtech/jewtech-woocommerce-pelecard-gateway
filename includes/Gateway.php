@@ -497,7 +497,15 @@ class Gateway extends WC_Payment_Gateway_CC {
 	/**
 	 * @return int
 	 */
-	public function get_minimum_payments() {
+	public function get_minimum_payments(WC_Order $order=null) {
+		if ($order!=null) {
+			$order_set_number_of_payments = $order->get_meta( 'billing_number_of_payments' );
+			if ( ! empty( $order_set_number_of_payments ) and is_numeric( $order_set_number_of_payments ) ) {
+				return apply_filters( 'wpg/checkout/min_payments', absint( $order_set_number_of_payments ) );
+			}
+		}
+
+
 		$min_payments = $this->get_option( 'min_payments', 1 );
 
 		$total = $this->get_checkout_total();
@@ -543,7 +551,14 @@ class Gateway extends WC_Payment_Gateway_CC {
 	/**
 	 * @return int
 	 */
-	public function get_maximum_payments() {
+	public function get_maximum_payments(WC_Order $order=null) {
+		if($order!=null) {
+			$order_set_number_of_payments = $order->get_meta( 'billing_number_of_payments' );
+			if ( ! empty( $order_set_number_of_payments ) and is_numeric( $order_set_number_of_payments ) ) {
+				return apply_filters( 'wpg/checkout/max_payments', absint( $order_set_number_of_payments ) );
+			}
+		}
+
 		$max_payments = $this->get_option( 'max_payments', 1 );
 
 		$total = $this->get_checkout_total();
